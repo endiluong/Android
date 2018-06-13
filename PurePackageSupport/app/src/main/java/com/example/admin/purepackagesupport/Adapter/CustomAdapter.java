@@ -9,7 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
+import com.example.admin.purepackagesupport.R;
 import com.example.admin.purepackagesupport.Repository.DataModel;
 
 import java.util.ArrayList;
@@ -46,16 +48,22 @@ public class CustomAdapter extends ArrayAdapter<DataModel> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        return super.getView(position, convertView, parent);
         LayoutInflater inflater= myContext.getLayoutInflater();
         convertView=inflater.inflate(resource,null);
+
         /////////////////////////////////////////////////
         //Create Temp from DataModel to put on Custom Item
         /////////////////////////////////////////////////
         DataModel temp= new DataModel();
-
+        ////////////////////////////////////////////////
+        TextView tvID=(TextView)convertView.findViewById(R.id.ictvId);
+        TextView tvName=(TextView)convertView.findViewById(R.id.ictvName);
+        ///////////////////////////////////////////////
+        //Set Data to Item
+        //////////////////////////////////////////////
+        tvID.setText(temp.getId());
+        tvName.setText(temp.getName());
 
         return convertView;
-
     }
 }
