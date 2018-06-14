@@ -84,6 +84,7 @@ public class Data_Access_Object_DAO {
 //          values.put(SQLiteHelper.DATABASE_XXXX,image);
         return db.insert(SQLiteHelper.DATA_TABLE_NAME, null, values);
     }
+
     /////////////////////////////////////////////////
     /////////
     /// UPDATE
@@ -101,9 +102,9 @@ public class Data_Access_Object_DAO {
 //        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
 //        byte[] image = baos.toByteArray();
 //        values.put(SQLHelper.DATA_XXXX, image);
-
         return db.update(SQLiteHelper.DATA_TABLE_NAME, values, "id=?", new String[]{dataModel.getId()});
     }
+
     ///////////////////////////////////////////////
     ////////
     /// DELETE
@@ -111,6 +112,7 @@ public class Data_Access_Object_DAO {
     public int deleteProduct(DataModel dataModel) {
         return db.delete(SQLiteHelper.DATA_TABLE_NAME, "id=?", new String[]{dataModel.getId()});
     }
+
     //////////////////////////////////////////////
     /////////////
     /// CREATE INSTANCE for other class recall

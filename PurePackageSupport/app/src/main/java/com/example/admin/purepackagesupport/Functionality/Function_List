@@ -6,3 +6,18 @@
                     PUT IT ON BUTTON CALL
 /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////
+
+
+1. CREATE INITIAL()
+ private void initial() {
+        daoModel= Data_Access_Object_DAO.getInstance(getBaseContext());
+    }
+---------------------------------------------
+2. INSERT BUTTON
+    _Get Text from EditText >> Get Data to Variables
+    _Temp=new DataModel()
+    _temp.set Data from Variables using SETXXXX
+    _daoModel.InsertItem(temp);
+---------------------------------------------
+3.  UPDATE BUTTON
+    _

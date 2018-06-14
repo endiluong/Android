@@ -5,7 +5,6 @@ import android.os.Parcelable;
 
 public class DataModel implements Parcelable {
     String id,name;
-
     //////////////////////////////////
     //This is the Basic Data Model //
     ////////////////////////////////
