@@ -4,27 +4,32 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class DataModel implements Parcelable {
-    String id,name;
+    String id,title,content;
+
+
     //////////////////////////////////
     //This is the Basic Data Model //
     ////////////////////////////////
 
-
     public DataModel() {
     }
 
-    public DataModel(String id) {
-        this.id = id;
-    }
-
-    public DataModel(String id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
     protected DataModel(Parcel in) {
-        id = in.readString();
-        name = in.readString();
+        id= in.readString();
+        title = in.readString();
+        content = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(id);
+        dest.writeString(title);
+        dest.writeString(content);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
     public static final Creator<DataModel> CREATOR = new Creator<DataModel>() {
@@ -39,6 +44,18 @@ public class DataModel implements Parcelable {
         }
     };
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
     public String getId() {
         return id;
     }
@@ -47,22 +64,8 @@ public class DataModel implements Parcelable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
+    public void setContent(String content) {
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(id);
-        dest.writeString(name);
+        this.content = content;
     }
 }

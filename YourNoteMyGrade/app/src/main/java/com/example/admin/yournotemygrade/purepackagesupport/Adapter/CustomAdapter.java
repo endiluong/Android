@@ -57,13 +57,13 @@ public class CustomAdapter extends ArrayAdapter<DataModel> {
         /////////////////////////////////////////////////
         DataModel temp= new DataModel();
         ////////////////////////////////////////////////
-        TextView tvID=(TextView)convertView.findViewById(R.id.ictvId);
-        TextView tvName=(TextView)convertView.findViewById(R.id.ictvName);
+        TextView tvID=(TextView)convertView.findViewById(R.id.cstvTittle);
+        TextView tvName=(TextView)convertView.findViewById(R.id.cstvContent);
         ///////////////////////////////////////////////
         //Set Data to Item
         //////////////////////////////////////////////
-        tvID.setText(temp.getId());
-        tvName.setText(temp.getName());
+        tvID.setText(temp.getTitle());
+        tvName.setText(temp.getContent());
 
         return convertView;
     }

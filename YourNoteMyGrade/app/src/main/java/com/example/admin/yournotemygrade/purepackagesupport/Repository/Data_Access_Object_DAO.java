@@ -33,7 +33,8 @@ public class Data_Access_Object_DAO {
         while (c.moveToNext()) {
             temp = new DataModel();
             temp.setId(c.getString(c.getColumnIndex(SQLiteHelper.DATA_MODEL_ID)));
-            temp.setName(c.getString(c.getColumnIndex(SQLiteHelper.DATA_MODEL_NAME)));
+            temp.setTitle(c.getString(c.getColumnIndex(SQLiteHelper.DATA_MODEL_TITLE)));
+            temp.setContent(c.getString(c.getColumnIndex(SQLiteHelper.DATA_MODEL_CONTENT)));
 
             //////////////////////////////////
             //BITMAP PICTURE
@@ -60,10 +61,10 @@ public class Data_Access_Object_DAO {
         return list.get(0);
     }
 
-    //get By Name
-    public DataModel getByName(String name) {
-        String sql = "SELECT * FROM" + SQLiteHelper.DATA_TABLE_NAME + " WHERE NAME=? ";
-        ArrayList<DataModel> list = getDataModels(sql, name);
+    //get By Title
+    public DataModel getByName(String title) {
+        String sql = "SELECT * FROM" + SQLiteHelper.DATA_TABLE_NAME + " WHERE TITLE=? ";
+        ArrayList<DataModel> list = getDataModels(sql, title);
         return list.get(0);
     }
 
@@ -74,7 +75,8 @@ public class Data_Access_Object_DAO {
     public long insertItem(DataModel datamodel) {
         ContentValues values = new ContentValues();
         values.put(SQLiteHelper.DATA_MODEL_ID, datamodel.getId());
-        values.put(SQLiteHelper.DATA_MODEL_NAME, datamodel.getName());
+        values.put(SQLiteHelper.DATA_MODEL_TITLE, datamodel.getTitle());
+        values.put(SQLiteHelper.DATA_MODEL_CONTENT, datamodel.getContent());
         // FOR IMAGE BITMAP
         /////////////////////////////////
 //        ByteArrayOutputStream baos= new ByteArrayOutputStream();
@@ -94,7 +96,9 @@ public class Data_Access_Object_DAO {
         ContentValues values = new ContentValues();
 
         values.put(SQLiteHelper.DATA_MODEL_ID, dataModel.getId());
-        values.put(SQLiteHelper.DATA_MODEL_NAME, dataModel.getName());        // image
+        values.put(SQLiteHelper.DATA_MODEL_TITLE, dataModel.getTitle());
+        values.put(SQLiteHelper.DATA_MODEL_CONTENT, dataModel.getContent());
+        // image
         ///////////////////////////////////////////////////////////
         //picture
 //        ByteArrayOutputStream baos = new ByteArrayOutputStream();

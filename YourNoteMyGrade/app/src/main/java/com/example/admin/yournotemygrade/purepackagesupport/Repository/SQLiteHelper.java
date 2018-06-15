@@ -18,7 +18,8 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     public static String DATABASE_NAME="DATA_BASE_NAME";
     public static String DATA_TABLE_NAME="Table_Name";
     public static String DATA_MODEL_ID="Id";
-    public static String DATA_MODEL_NAME="Name";
+    public static String DATA_MODEL_TITLE="Title";
+    public static String DATA_MODEL_CONTENT="Content";
     ///////////////////////////////////////////
     //CREATE TABLE QUERY
     /////////////////////////////////////////
@@ -26,7 +27,8 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     ///////////////////////////////////////
     public String CREATE_TABLE="CREATE TABLE "+ DATABASE_NAME+"("+
                                 DATA_MODEL_ID+"TEXT PRIMARY KEY, "+
-                                DATA_MODEL_NAME+"TEXT )";
+                                DATA_MODEL_TITLE+"TEXT,"+
+                                DATA_MODEL_CONTENT+"TEXT )";
 
     ////////////////////////////////////////
     //Constructor
