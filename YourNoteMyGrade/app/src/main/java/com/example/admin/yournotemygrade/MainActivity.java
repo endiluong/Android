@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //near ly done
                 temp= listAllDataModel.get(position);
-                System.out.println(temp.getTitle());
+                Update(temp);
             }
         });
         ///////////////////////////////////////////////
@@ -68,8 +68,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnAdd.setOnClickListener(this);
     }
 
-    private void Update(int position) {
-
+    private void Update(DataModel dataModel) {
+        System.out.println(dataModel.getId());
+        System.out.println(dataModel.getTitle());
+        System.out.println(dataModel.getContent());
     }
 
 
