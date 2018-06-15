@@ -15,8 +15,8 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     // This is Default Variables change it in use
     ////////////////////////////////////////////
     public static int DATABASE_VER=1;
-    public static String DATABASE_NAME="DATA_BASE_NAME";
-    public static String DATA_TABLE_NAME="Table_Name";
+    public static String DATABASE_NAME=" My Note Database ";
+    public static String DATA_TABLE_NAME="Notes";
     public static String DATA_MODEL_ID="Id";
     public static String DATA_MODEL_TITLE="Title";
     public static String DATA_MODEL_CONTENT="Content";
@@ -25,10 +25,10 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     /////////////////////////////////////////
     //EDIT THIS QUERY IN USE     \/\/\/   //
     ///////////////////////////////////////
-    public String CREATE_TABLE="CREATE TABLE "+ DATABASE_NAME+"("+
-                                DATA_MODEL_ID+"TEXT PRIMARY KEY, "+
-                                DATA_MODEL_TITLE+"TEXT,"+
-                                DATA_MODEL_CONTENT+"TEXT )";
+    public String CREATE_TABLE="CREATE TABLE "+ DATA_TABLE_NAME +"( "+
+                                DATA_MODEL_ID+" TEXT PRIMARY KEY, "+
+                                DATA_MODEL_TITLE+" TEXT,"+
+                                DATA_MODEL_CONTENT+" TEXT )";
 
     ////////////////////////////////////////
     //Constructor

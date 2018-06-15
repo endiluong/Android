@@ -50,20 +50,20 @@ public class Data_Access_Object_DAO {
 
     //Get All List
     public ArrayList<DataModel> getAllItem() {
-        String sql = "SELECT * FROM" + SQLiteHelper.DATA_TABLE_NAME;
+        String sql = "SELECT * FROM " + SQLiteHelper.DATA_TABLE_NAME;
         return getDataModels(sql);
     }
 
     //get By Id
     public DataModel getById(String Id) {
-        String sql = "SELECT * FROM" + SQLiteHelper.DATA_TABLE_NAME + " WHERE ID=? ";
+        String sql = "SELECT * FROM " + SQLiteHelper.DATA_TABLE_NAME + " WHERE ID=? ";
         ArrayList<DataModel> list = getDataModels(sql, Id);
         return list.get(0);
     }
 
     //get By Title
     public DataModel getByName(String title) {
-        String sql = "SELECT * FROM" + SQLiteHelper.DATA_TABLE_NAME + " WHERE TITLE=? ";
+        String sql = "SELECT * FROM " + SQLiteHelper.DATA_TABLE_NAME + " WHERE TITLE=? ";
         ArrayList<DataModel> list = getDataModels(sql, title);
         return list.get(0);
     }
@@ -74,9 +74,9 @@ public class Data_Access_Object_DAO {
     ///////////////////////////////////////////////
     public long insertItem(DataModel datamodel) {
         ContentValues values = new ContentValues();
-        values.put(SQLiteHelper.DATA_MODEL_ID, datamodel.getId());
-        values.put(SQLiteHelper.DATA_MODEL_TITLE, datamodel.getTitle());
-        values.put(SQLiteHelper.DATA_MODEL_CONTENT, datamodel.getContent());
+        values.put(SQLiteHelper.DATA_MODEL_ID , datamodel.getId());
+        values.put(SQLiteHelper.DATA_MODEL_TITLE , datamodel.getTitle());
+        values.put(SQLiteHelper.DATA_MODEL_CONTENT , datamodel.getContent());
         // FOR IMAGE BITMAP
         /////////////////////////////////
 //        ByteArrayOutputStream baos= new ByteArrayOutputStream();

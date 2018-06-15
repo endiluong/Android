@@ -8,6 +8,14 @@
     tools:context=".purepackagesupport.Functionality.EditSubmitActivity">
 
     <EditText
+        android:id="@+id/inpetID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="ID"
+        android:inputType="textPersonName" />
+
+    <EditText
         android:id="@+id/inpetTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
