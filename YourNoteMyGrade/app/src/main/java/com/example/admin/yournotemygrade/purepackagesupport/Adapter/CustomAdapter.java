@@ -1,29 +1,20 @@
 package com.example.admin.yournotemygrade.purepackagesupport.Adapter;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.TextView;
 
 
-import com.example.admin.yournotemygrade.MainActivity;
 import com.example.admin.yournotemygrade.R;
-import com.example.admin.yournotemygrade.purepackagesupport.Functionality.EditSubmitActivity;
-import com.example.admin.yournotemygrade.purepackagesupport.Repository.DataModel;
-import com.example.admin.yournotemygrade.purepackagesupport.Ultility.Support;
+import com.example.admin.yournotemygrade.purepackagesupport.Model.DataModel;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class CustomAdapter extends ArrayAdapter<DataModel> {
 

@@ -1,4 +1,4 @@
-package com.example.admin.yournotemygrade.purepackagesupport.Repository;
+package com.example.admin.yournotemygrade.purepackagesupport.Model;
 
 import android.os.Parcel;
 import android.os.Parcelable;

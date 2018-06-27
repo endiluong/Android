@@ -2,35 +2,41 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/singleNote"
-    android:layout_width="match_parent"
+    android:layout_width="150dp"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="8dp"
     android:background="@drawable/note_selector"
-    android:focusableInTouchMode="false"
     android:clickable="false"
-    android:focusable="false"
     android:descendantFocusability="blocksDescendants"
-    >
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/cstvTittle"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24dp"
-        android:textStyle="bold"
-        />
+        android:background="#b0bec5"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/cstvTittle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        >
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/cstvContent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <ImageView
-        android:id="@+id/csIMGV"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        android:paddingLeft="5dp"
+        android:textColor="@color/colorText" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
 
 </LinearLayout>

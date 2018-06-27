@@ -11,6 +11,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     //Handle all about SQLite ///
     //Using Variables to ReUse///
     ///////////////////////////
+
     //
     // This is Default Variables change it in use
     ////////////////////////////////////////////

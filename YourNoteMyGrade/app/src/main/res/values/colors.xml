@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="MatYellow">#FFEE58</color>
+    <color name="colorPrimary">#9E9E9E</color>
+    <color name="colorPrimaryDark">#616161</color>
+    <color name="colorAccent">#9E9E9E</color>
+    <color name="MatYellow">#fdd835</color>
+    <color name="MATLite">#ffee58</color>
+    <color name="MATGrey">#F5F5F5</color>
+    <color name="BlueGrey">#607D8B</color>
+    <color name="BlueGreyDark">#455A64</color>
+    <color name="colorText">#FFFFFF</color>
+    <color name="confrm">#00bcd4</color>
+    <color name="cancel">#b0372c</color>
 </resources>

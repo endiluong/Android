@@ -4,11 +4,9 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
+import com.example.admin.yournotemygrade.purepackagesupport.Model.DataModel;
+
 import java.util.ArrayList;
 
 public class Data_Access_Object_DAO {
@@ -26,10 +24,11 @@ public class Data_Access_Object_DAO {
         ArrayList<DataModel> result = new ArrayList<>();
         Cursor c = db.rawQuery(sql, selectionArgs);
         DataModel temp;
-//For bitmap image
-//        ByteArrayInputStream imgStream;
-//        byte[] imgFromData
-///////////////////////////////////////
+
+            //For bitmap image
+            //        ByteArrayInputStream imgStream;
+            //        byte[] imgFromData
+            ///////////////////////////////////////
         while (c.moveToNext()) {
             temp = new DataModel();
             temp.setId(c.getString(c.getColumnIndex(SQLiteHelper.DATA_MODEL_ID)));
@@ -62,10 +61,10 @@ public class Data_Access_Object_DAO {
     }
 
     //get By Title
-    public DataModel getByName(String title) {
-        String sql = "SELECT * FROM " + SQLiteHelper.DATA_TABLE_NAME + " WHERE TITLE=? ";
+    public ArrayList<DataModel> getByName(String title) {
+        String sql = "SELECT * FROM " + SQLiteHelper.DATA_TABLE_NAME + " WHERE TITLE LIKE ? ";
         ArrayList<DataModel> list = getDataModels(sql, title);
-        return list.get(0);
+        return list;
     }
 
     /////////////////////////////////////////////////
@@ -94,8 +93,6 @@ public class Data_Access_Object_DAO {
     //Update
     public int updateProduct(DataModel dataModel) {
         ContentValues values = new ContentValues();
-
-        values.put(SQLiteHelper.DATA_MODEL_ID, dataModel.getId());
         values.put(SQLiteHelper.DATA_MODEL_TITLE, dataModel.getTitle());
         values.put(SQLiteHelper.DATA_MODEL_CONTENT, dataModel.getContent());
         // image

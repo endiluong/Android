@@ -7,8 +7,8 @@
     android:orientation="vertical"
     tools:context=".purepackagesupport.Controller.EditSubmitActivity">
 
-    <EditText
-        android:id="@+id/inpetID"
+    <TextView
+        android:id="@+id/udtvId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -16,17 +16,17 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/inpetTitle"
+        android:id="@+id/udetTit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Title" />
 
     <EditText
-        android:id="@+id/inpetContent"
+        android:id="@+id/udetContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Your Notes"
         android:ems="10"
+        android:hint="Your Notes"
         android:inputType="textMultiLine" />
 
     <LinearLayout
@@ -35,18 +35,22 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/inpbtnAdd"
+            android:id="@+id/udbtnAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Add" />
+            android:text="Update"
+
+            />
 
         <Button
-            android:id="@+id/inpbtnCan"
+            android:id="@+id/udpbtnDel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Cancel" />
+
+            android:text="Delete" />
+
     </LinearLayout>
 
 </LinearLayout>
